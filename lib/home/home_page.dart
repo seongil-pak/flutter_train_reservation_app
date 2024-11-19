@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_train_reservation_app/stationlist/station_list_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -60,6 +61,15 @@ class HomePage extends StatelessWidget {
                           color: Colors.grey,
                         ),
                       ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => StationListPage()),
+                          );
+                        },
+                      ),
                       Text(
                         '선택',
                         style: TextStyle(
@@ -74,10 +84,29 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            OutlinedButton(
-              onPressed: () {},
-              child: Text('좌석 선택'),
-            ),
+            Container(
+                width: 350,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    '좌석 선택',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                )),
           ],
         ),
       ),

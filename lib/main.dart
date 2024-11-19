@@ -18,12 +18,14 @@ class MyApp extends StatelessWidget {
           seedColor: Colors.black,
           brightness: Brightness.light,
         ),
+        dividerColor: Colors.black38,
       ),
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.black,
           brightness: Brightness.dark,
         ),
+        dividerColor: Colors.black38,
       ),
       home: HomePage(),
     );
